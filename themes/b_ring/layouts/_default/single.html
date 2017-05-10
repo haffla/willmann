@@ -1,0 +1,7 @@
+{{ partial "header.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{ .Content }}
+  {{- if eq .Type "gal" }}
+    {{ partial "gal.html" . }}
+  {{- end }}
+{{ partial "footer.html" . }}

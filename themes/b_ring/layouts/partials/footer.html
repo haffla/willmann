@@ -1,0 +1,9 @@
+  <a href="{{ .Site.BaseURL }}">Home</a>
+  {{- if eq .Type "gal" }}
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="/js/lightbox.min.js"></script>
+  {{- end }}
+  <script src="/app.js"></script>
+  <script>require('application').init();</script>
+</body>
+</html>

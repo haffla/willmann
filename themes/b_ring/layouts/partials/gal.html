@@ -1,0 +1,19 @@
+{{ $files := readDir (printf "/static/photos/%s" .Type) }}
+{{ if isset .Params "gal" }}
+  {{ $type := .Params.gal }}
+  {{ $imageMetaData := index .Site.Data $type }}
+  <div>
+    {{ range $files }}
+      {{/* Bloody hack for checking if the file is a folder */}}
+      {{ $len := (len (split .Name ".")) }}
+      {{ if (not (eq $len 1)) }}
+        {{ $path := (printf "/photos/%s%s" $type (relURL .Name)) }}
+        {{ $thumbPath := (printf "/photos/%s/thumbs%s" $type (relURL .Name)) }}
+        {{ $meta := index $imageMetaData .Name }}
+        <a data-title="{{ $meta.alt }}" href="{{ $path }}" data-lightbox="t_will">
+          <img alt="{{ $meta.alt }}" src="{{ $thumbPath }}"/>
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}
