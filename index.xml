@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>T_WILL</title>
+    <link>http://example.org/</link>
+    <description>Recent content on T_WILL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 May 2017 21:30:21 +0200</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Project One</title>
+      <link>http://example.org/gal/one/</link>
+      <pubDate>Wed, 10 May 2017 21:30:21 +0200</pubDate>
+      
+      <guid>http://example.org/gal/one/</guid>
+      <description>So savvy</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://example.org/contact/</link>
+      <pubDate>Wed, 10 May 2017 21:16:22 +0200</pubDate>
+      
+      <guid>http://example.org/contact/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
