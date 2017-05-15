@@ -13,9 +13,3 @@ min_version = "0.20.7"
 [author]
   name = "Jakob Pupke"
   homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""

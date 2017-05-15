@@ -1,8 +1,36 @@
-$default-bg: white;
-$default-text: black;
+@import "reset";
+
+$font-size-text: 12px;
 
 body {
-  font-family: Georgia, serif;
-  background: $default-bg;
-  color: $default-text;
+  font-family: Helvetica, sans-serif;
+  line-height: 13px;
+}
+
+#main-wrapper {
+  margin: 10px;
+  width: 100%;
+}
+
+#galleries-wrapper {
+  margin-top: 20px;
+}
+
+.gallery-image {
+  display: inline-block;
+}
+.description {
+  margin-top: 10px;
+}
+
+.the-content {
+  margin-top: 10px;
+}
+
+#home-link, p, td {
+  font-size: $font-size-text;
+}
+
+p, td {
+  line-height: 13px;
 }

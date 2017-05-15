@@ -1,6 +1,11 @@
 {{ partial "header.html" . }}
-  <h2>Pages</h2>
-  {{- range first 10 .Data.Pages -}}
-    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
-  {{- end }}
+  {{ partial "top.html" . }}
+  <div id="galleries-wrapper">
+    {{ range where .Data.Pages "Type" "gal"}}
+      <div>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ partial "gal.html" . }}
+      </div>
+    {{ end }}
+  </div>
 {{ partial "footer.html" . }}

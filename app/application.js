@@ -1,8 +1,13 @@
 'use strict';
 
+import lightbox from 'lightbox2';
+
 const App = {
   init() {
-    console.log('App initialized.');
+    lightbox.option({
+      resizeDuration: 280,
+      wrapAround: true
+    });
   }
 };
 

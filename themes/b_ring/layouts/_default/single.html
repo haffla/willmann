@@ -1,7 +1,10 @@
 {{ partial "header.html" . }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
+  <p>{{ .Title }}</p>
   {{- if eq .Type "gal" }}
     {{ partial "gal.html" . }}
   {{- end }}
+  <div class="the-content">
+    {{ .Content }}
+  </div>
+  <a id="home-link" href="{{ .Site.BaseURL }}">Back</a>
 {{ partial "footer.html" . }}

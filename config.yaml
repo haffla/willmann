@@ -1,0 +1,13 @@
+baseURL: "http://example.org/"
+languageCode: "en-us"
+title: "T_WILL"
+theme: "b_ring"
+
+params:
+  fullname: "Tob Walla"
+  contact:
+    mail: "mail@tobwalla.com"
+    instagram: "@tob_walla"
+  seo:
+    description: "Tob Wallas Portfolio"
+    keywords: "art, photography, berlin"
