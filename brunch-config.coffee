@@ -16,6 +16,8 @@ module.exports = config:
   plugins:
     copycat:
       images: lightbox_images.map (image) -> 'node_modules/lightbox2/dist/images/' + image
+      onlyChanged: true
+      verbose: false
     sharp:
       src: 'photos'
       dest: 'static/photos'
