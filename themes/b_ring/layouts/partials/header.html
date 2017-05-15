@@ -3,7 +3,7 @@
 <head>
   <meta name="author" content="Jakob Pupke">
   {{ .Hugo.Generator }}
-  <link rel="stylesheet" href="/app.css"/>
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/app.css"/>
   <title>{{ .Title }}</title>
   {{ range $k, $v := .Site.Params.seo }}
     <meta name="{{ $k }}" content="{{ $v }}">

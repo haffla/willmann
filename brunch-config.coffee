@@ -4,8 +4,8 @@ module.exports = config:
   paths:
     public: 'static'
   files:
-    javascripts: joinTo: 'app.js'
-    stylesheets: joinTo: 'app.css'
+    javascripts: joinTo: 'js/app.js'
+    stylesheets: joinTo: 'css/app.css'
   npm:
     enabled: true
     globals:

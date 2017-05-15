@@ -11,6 +11,7 @@
     "lightbox2": "^2.9.0",
     "sass-brunch": "^1.9.2",
     "sharp": "^0.17.3",
-    "sharp-brunch": "^1.0.5"
+    "sharp-brunch": "^1.0.5",
+    "uglify-js-brunch": "^2.10.0"
   }
 }

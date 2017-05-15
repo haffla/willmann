@@ -8,12 +8,12 @@
       {{ $len := (len (split .Name ".")) }}
       {{/* only files (no folders) and no thumbs */}}
       {{ if and (not (eq $len 1)) (not (hasPrefix .Name "thumb-")) }}
-        {{ $path := (printf "/photos/%s%s" $type (relURL .Name)) }}
+        {{ $path := (printf "/photos/%s/%s" $type .Name) }}
         {{ $thumbPath := (printf "/photos/%s/thumb-%s" $type .Name) }}
         {{ $meta := index $imageMetaData .Name }}
         <div class="gallery-image">
-          <a data-title="{{ $meta.alt }}" href="{{ $path }}" data-lightbox="t_will">
-            <img alt="{{ $meta.alt }}" src="{{ $thumbPath }}"/>
+          <a data-title="{{ $meta.alt }}" href="{{ $.Site.BaseURL }}{{ $path }}" data-lightbox="t_will">
+            <img alt="{{ $meta.alt }}" src="{{ $.Site.BaseURL }}{{ $thumbPath }}"/>
           </a>
           <p>{{ $meta.short }}</p>
         </div>
