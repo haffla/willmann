@@ -2,34 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.org/gal/one/</loc>
+    <loc>https://haffla.github.io/willmann/gal/one/</loc>
     <lastmod>2017-05-10T21:30:21+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/contact/</loc>
+    <loc>https://haffla.github.io/willmann/contact/</loc>
     <lastmod>2017-05-10T21:16:22+02:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://haffla.github.io/willmann/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/gal/</loc>
+    <loc>https://haffla.github.io/willmann/gal/</loc>
     <lastmod>2017-05-10T21:30:21+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://haffla.github.io/willmann/</loc>
     <lastmod>2017-05-10T21:30:21+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://haffla.github.io/willmann/tags/</loc>
     <priority>0</priority>
   </url>
   
