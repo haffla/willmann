@@ -1,24 +1,66 @@
 {{ if isset .Params "gal" }}
-  {{ $type := .Params.gal }}
-  {{ $imageMetaData := index .Site.Data $type }}
-  {{ $files := readDir (printf "/static/photos/%s" .Type) }}
+  {{ $gallery := .Params.gal }}
+  {{ $imageMetaData := .Params.photos }}
+  {{ $dir := (printf "static/photos/%s/" $gallery) }}
+
   <div class="gallery-container">
-    {{ range $files }}
-      {{/* Bloody hack for checking if the file is a folder */}}
-      {{ $len := (len (split .Name ".")) }}
-      {{/* only files (no folders) and no thumbs */}}
-      {{ if and (not (eq $len 1)) (not (hasPrefix .Name "thumb-")) }}
-        {{ $path := (printf "/photos/%s/%s" $type .Name) }}
-        {{ $thumbPath := (printf "/photos/%s/thumb-%s" $type .Name) }}
-        {{ $meta := index $imageMetaData .Name }}
-        <div class="gallery-image">
-          <a data-title="{{ $meta.alt }}" href="{{ $.Site.BaseURL }}{{ $path }}" data-lightbox="t_will">
-            <img alt="{{ $meta.alt }}" src="{{ $.Site.BaseURL }}{{ $thumbPath }}"/>
+
+    {{ range $m := $imageMetaData }}
+      {{ $imageName := index $m "name" }}
+      {{ $alt := index $m "alt" }}
+      {{ $short := index $m "short" }}
+      {{ $path := (printf "/photos/%s/%s" $gallery $imageName) }}
+      {{ $margin := index $m "margin" }}
+      {{ $thumbPathMd := (printf "/photos/%s/thumb_md-%s" $gallery $imageName) }}
+      {{ $thumbPathSm := (printf "/photos/%s/thumb_sm-%s" $gallery $imageName) }}
+
+      <div class="gallery-image">
+
+        {{ if (where (readDir $dir) "Name" $imageName) }}
+          <a data-title="{{ $alt }}" href="{{ $.Site.BaseURL }}{{ $path }}" data-lightbox="lightbox-{{ $gallery }}">
+            <img alt="{{ $alt }}"
+
+              {{ if $margin }}
+                style="
+
+                  {{ if index $margin "top" }}
+                    margin-top: {{ index $margin "top" }}px;
+                  {{ end }}
+
+                  {{ if index $margin "bottom" }}
+                    margin-bottom: {{ index $margin "bottom" }}px;
+                  {{ end }}
+
+                  {{ if index $margin "left" }}
+                    margin-left: {{ index $margin "left" }}px;
+                  {{ end }}
+
+                  {{ if index $margin "right" }}
+                    margin-right: {{ index $margin "right" }}px;
+                  {{ end }}
+
+                      "
+              {{ end }}
+
+              {{ if (index $m "featured") }}
+                src="{{ $.Site.BaseURL }}{{ $thumbPathMd }}"
+              {{ else }}
+                src="{{ $.Site.BaseURL }}{{ $thumbPathSm }}"
+              {{ end }}
+
+              />
           </a>
-          <p>{{ $meta.short }}</p>
-        </div>
-      {{ end }}
+          <p>{{ $short }}</p>
+
+        {{ else }}
+          <p>{{ substr $path 1 }} does not exist</p>
+        {{ end }}
+
+      </div>
+
     {{ end }}
+
     <p class="description">{{ .Params.description }}</p>
   </div>
+
 {{ end }}

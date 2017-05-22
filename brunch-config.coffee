@@ -25,14 +25,20 @@ module.exports = config:
       tasks:
         [
           [
-            {resize: [16383, 16383]}
+            {resize: [16383, null]}
             {withoutEnlargement: true}
             {rename: '{base}.{ext}'}
-          ],
+          ]
           [
-            {resize: [200, 200]}
+            {resize: [400, null]}
             {withoutEnlargement: true}
             {quality: 75}
-            {rename: 'thumb-{base}.{ext}'}
+            {rename: 'thumb_md-{base}.{ext}'}
+          ]
+          [
+            {resize: [200, null]}
+            {withoutEnlargement: true}
+            {quality: 75}
+            {rename: 'thumb_sm-{base}.{ext}'}
           ]
         ]
