@@ -5,7 +5,7 @@
 
   <div class="gallery-container">
 
-    {{ range $m := $imageMetaData }}
+    {{ range $index, $m := $imageMetaData }}
       {{ $imageName := index $m "name" }}
       {{ $alt := index $m "alt" }}
       {{ $short := index $m "short" }}
@@ -17,7 +17,7 @@
       <div class="gallery-image">
 
         {{ if (where (readDir $dir) "Name" $imageName) }}
-          <a data-title="{{ $alt }}" href="{{ $.Site.BaseURL }}{{ $path }}" data-lightbox="lightbox-{{ $gallery }}">
+          <a href="/gal/two?index={{ $index }}">
             <img alt="{{ $alt }}"
 
               {{ if $margin }}

@@ -1,15 +1,24 @@
 @import "reset";
+@import "../../node_modules/flickity/css/flickity";
 
-$font-size-text: 12px;
-$font-size-small: 10px;
+$font-size-text: 11px;
+$font-size-small: 9px;
 
 body {
   font-family: Helvetica, sans-serif;
   line-height: 13px;
 }
 
+a {
+  color: black;
+}
+
 #main-wrapper {
   margin: 10px;
+}
+
+#personal {
+  margin-bottom: 40px;
 }
 
 // Only index page
@@ -30,9 +39,22 @@ body {
 
 .the-content {
   margin-top: 10px;
+  text-align: center;
 }
 
-#home-link, p, td {
+#single-actions {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  a {
+    margin-right: 10px;
+  }
+  a:last-child {
+    margin-right: 0;
+  }
+}
+
+#home-link, p, td, a {
   font-size: $font-size-text;
 }
 
@@ -47,8 +69,25 @@ body {
   font-size: $font-size-small;
 }
 
+.hidden {
+  display: none;
+}
 
+/* carousel height, as percentage of width */
+.carousel {
+  margin-top: 65px;
+  padding-bottom: 33.3%;
+}
 
-p, td {
-  line-height: 13px;
+/* viewport inherit size from carousel */
+.carousel .flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
+
+/* cell inherit height from carousel */
+.carousel-cell {
+  height: 100%;
+  margin-right: 1000px;
+  margin-left: 1000px;
 }

@@ -1,13 +1,15 @@
-<p>{{ .Site.Params.fullname }}<p>
-<table>
-  {{ range $k, $v := .Site.Params.contact }}
-    <tr>
-      <td>{{ $k }}:</td>
-      {{ if eq $k "mail" }}
-        <td>{{ (printf "<a href='mailto:%s'>%s</a>" $v $v) | safeHTML }}</td>
-      {{ else }}
-        <td>{{ $v }}</td>
-      {{ end }}
-    </tr>
-  {{ end }}
-</table>
+<div id="personal">
+  <p>{{ .Site.Params.fullname }}<p>
+  <table>
+    {{ range $k, $v := .Site.Params.contact }}
+      <tr>
+        <td>{{ $k }}:</td>
+        {{ if eq $k "mail" }}
+          <td>{{ (printf "<a href='mailto:%s'>%s</a>" $v $v) | safeHTML }}</td>
+        {{ else }}
+          <td>{{ $v }}</td>
+        {{ end }}
+      </tr>
+    {{ end }}
+  </table>
+</div>

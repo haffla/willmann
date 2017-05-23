@@ -1,10 +1,14 @@
 {{ partial "header.html" . }}
+{{ partial "top.html" . }}
   <p>{{ .Title }}</p>
   {{- if eq .Type "gal" }}
-    {{ partial "gal.html" . }}
+    {{ partial "flickity.html" . }}
   {{- end }}
-  <div class="the-content">
+  <div class="the-content hidden">
     {{ .Content }}
   </div>
-  <a id="home-link" href="{{ .Site.BaseURL }}">Back</a>
+  <div id="single-actions">
+    <a id="text-link" href="#">Text</a>
+    <a id="home-link" href="{{ .Site.BaseURL }}">Close</a>
+  </div>
 {{ partial "footer.html" . }}

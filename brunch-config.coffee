@@ -25,7 +25,7 @@ module.exports = config:
       tasks:
         [
           [
-            {resize: [16383, null]}
+            {resize: [1920, null]}
             {withoutEnlargement: true}
             {rename: '{base}.{ext}'}
           ]

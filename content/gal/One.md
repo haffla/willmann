@@ -8,21 +8,16 @@ photos:
     alt: "The first photo"
     short: One
     margin:
-      bottom: 50
       right: 35
   - name: two.jpeg
     alt: "The second photo wuhuu"
     short: "I'm featured"
     featured: true
     margin:
-      bottom: 100
       right: 100
   - name: three.jpeg
     alt: "The third photo OMG"
     short: Three
-  - name: kack.jpg
-    alt: fotze
-    short: kacke
 ---
 
 So savvy

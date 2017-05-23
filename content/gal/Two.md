@@ -10,16 +10,14 @@ photos:
     featured: true
     margin:
       right: 20
-      bottom: 40
   - name: dos.jpeg
     alt: "La segunda"
     short: "I'm featured!"
     margin:
-      bottom: 100
       right: 50
   - name: tres.jpeg
     alt: "La tercera"
     short: Three
 ---
 
-So savvy
+So here I am and stand before thou
