@@ -9,6 +9,6 @@
   </div>
   <div id="single-actions">
     <a id="text-link" href="#">Text</a>
-    <a id="home-link" href="{{ .Site.BaseURL }}">Close</a>
+    <a id="home-link" href="{{ .Site.BaseURL | relURL }}">Close</a>
   </div>
 {{ partial "footer.html" . }}

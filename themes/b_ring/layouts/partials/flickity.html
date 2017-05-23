@@ -6,7 +6,7 @@
     {{ $imageName := index $m "name" }}
     {{ $alt := index $m "alt" }}
     {{ $short := index $m "short" }}
-    {{ $path := (printf "/photos/%s/%s" $gallery $imageName) }}
+    {{ $path := (printf "%s/photos/%s/%s" (relURL $.Site.BaseURL) $gallery $imageName) }}
     <div class="carousel-cell">
       <img height="100%" width="auto" src="{{ $path }}" alt="{{ $alt }}"/>
     </div>

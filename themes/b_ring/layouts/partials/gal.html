@@ -2,6 +2,7 @@
   {{ $gallery := .Params.gal }}
   {{ $imageMetaData := .Params.photos }}
   {{ $dir := (printf "static/photos/%s/" $gallery) }}
+  {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 
   <div class="gallery-container">
 
@@ -17,7 +18,7 @@
       <div class="gallery-image">
 
         {{ if (where (readDir $dir) "Name" $imageName) }}
-          <a href="/gal/two?index={{ $index }}">
+          <a href="{{ $permaLink }}?index={{ $index }}">
             <img alt="{{ $alt }}"
 
               {{ if $margin }}
@@ -43,9 +44,9 @@
               {{ end }}
 
               {{ if (index $m "featured") }}
-                src="{{ $.Site.BaseURL }}{{ $thumbPathMd }}"
+                src="{{ $.Site.BaseURL | relURL }}{{ $thumbPathMd }}"
               {{ else }}
-                src="{{ $.Site.BaseURL }}{{ $thumbPathSm }}"
+                src="{{ $.Site.BaseURL | relURL }}{{ $thumbPathSm }}"
               {{ end }}
 
               />
