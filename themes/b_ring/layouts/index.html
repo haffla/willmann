@@ -1,6 +1,5 @@
 {{ partial "header.html" . }}
   {{ partial "top.html" . }}
-  <h1>{{ .Site.BaseURL | relURL }}</h1>
   <div id="galleries-wrapper">
     {{ range where .Data.Pages "Type" "gal"}}
       <div>
