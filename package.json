@@ -5,7 +5,7 @@
   "dependencies": {
     "babel-brunch": "^6.1.1",
     "brunch": "^2.10.9",
-    "copycat-brunch": "^1.1.0",
+    "flickity": "^2.0.8",
     "javascript-brunch": "^2.10.0",
     "jquery": "^3.2.1",
     "sass-brunch": "^1.9.2",

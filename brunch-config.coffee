@@ -1,5 +1,3 @@
-lightbox_images = ['close.png', 'loading.gif', 'next.png', 'prev.png']
-
 module.exports = config:
   paths:
     public: 'static'
@@ -11,13 +9,7 @@ module.exports = config:
     globals:
       $: 'jquery'
       jQuery: 'jquery'
-    styles:
-      'lightbox2': ['dist/css/lightbox.min.css']
   plugins:
-    copycat:
-      images: lightbox_images.map (image) -> 'node_modules/lightbox2/dist/images/' + image
-      onlyChanged: true
-      verbose: false
     sharp:
       src: 'photos'
       dest: 'static/photos'
