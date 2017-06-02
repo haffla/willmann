@@ -8,25 +8,24 @@ body {
   line-height: 13px;
 }
 
+#main-wrapper {
+  margin: 75px 10px 10px 10px;
+}
+
 a {
   color: black;
 }
 
-#main-wrapper {
-  margin: 10px;
-}
-
-#personal {
-  margin-bottom: 40px;
-}
-
 // Only index page
-#galleries-wrapper {
-  margin-top: 20px;
+#gallery {
+  text-align: center;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
-.gallery-container {
+.gallery-item {
   padding: 10px;
+  display: inline-block;
 }
 
 .gallery-image {
@@ -41,8 +40,15 @@ a {
   text-align: center;
 }
 
+.the-title {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
 #single-actions {
   position: absolute;
+  z-index: 10;
   right: 10px;
   top: 10px;
   a {
@@ -58,35 +64,57 @@ a {
 }
 
 #copyright-section {
-  position: fixed;
   bottom: 0;
+  width: 100%;
+  text-align: right;
+  font-size: $font-size-small;
+}
+
+#personal, #copyright-section {
+  position: fixed;
   left: 0;
+  right: 0;
   width: 100%;
   background-color: black;
   color: white;
-  text-align: right;
-  font-size: $font-size-small;
+}
+
+#personal {
+  top: 0;
+  height: 50px;
+  a {
+    color: white;
+  }
+
+  .wrapper {
+    position: relative;
+    .fullname, .links {
+      position: absolute;
+      top: 10px;
+    }
+    .fullname {
+      left: 20px;
+    }
+    .links {
+      right: 20px;
+    }
+  }
 }
 
 .hidden {
   display: none;
 }
 
-/* carousel height, as percentage of width */
-.carousel {
-  margin-top: 65px;
-  padding-bottom: 33.3%;
-}
+.swiper-container {
 
-/* viewport inherit size from carousel */
-.carousel .flickity-viewport {
-  position: absolute;
-  width: 100%;
-}
+  img {
+    max-width: 85%;
+    max-height: 85%;
+  }
 
-/* cell inherit height from carousel */
-.carousel-cell {
-  height: 100%;
-  margin-right: 1000px;
-  margin-left: 1000px;
+  .swiper-slide {
+    text-align: center;
+    min-height: 200px;
+    padding-top: 10px;
+  }
 }

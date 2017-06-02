@@ -1,11 +1,8 @@
 {{ partial "header.html" . }}
   {{ partial "top.html" . }}
-  <div id="galleries-wrapper">
+  <div id="gallery">
     {{ range where .Data.Pages "Type" "gal"}}
-      <div>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        {{ partial "gal.html" . }}
-      </div>
+      {{ partial "gal.html" . }}
     {{ end }}
   </div>
 {{ partial "footer.html" . }}

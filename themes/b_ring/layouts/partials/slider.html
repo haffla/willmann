@@ -1,0 +1,29 @@
+<div class="swiper-container">
+  <p class="the-title">{{ .Title }}</p>
+  <div class="the-content hidden">
+    {{ .Content }}
+  </div>
+  <div id="single-actions">
+    <a id="text-link" href="#">Text</a>
+    <a id="home-link" href="{{ .Site.BaseURL | relURL }}">Close</a>
+  </div>
+  <div class="swiper-wrapper">
+    {{ $gallery := .Params.gal }}
+    {{ $imageMetaData := .Params.photos }}
+
+    {{ range $index, $m := $imageMetaData }}
+      {{ $imageName := index $m "name" }}
+      {{ $alt := index $m "alt" }}
+      {{ $short := index $m "short" }}
+      {{ $path := (printf "%s/photos/%s/%s" (relURL $.Site.BaseURL) $gallery $imageName) }}
+      <div class="swiper-slide" data-hash="photo-{{ add $index 1 }}">
+        <img class="swiper-lazy" data-src="{{ $path }}" data-alt="{{ $alt }}"/>
+        <div class="swiper-lazy-preloader"></div>
+        <p class="hidden short">{{ $short }}</p>
+      </div>
+    {{ end }}
+  </div>
+  <div class="swiper-pagination swiper-pagination-black"></div>
+  <div class="swiper-button-prev swiper-button-black"></div>
+  <div class="swiper-button-next swiper-button-black"></div>
+</div>

@@ -4,23 +4,23 @@
   {{ $dir := (printf "static/photos/%s/" $gallery) }}
   {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 
-  <div class="gallery-container">
+  <div class="gallery-item">
 
-    {{ range $index, $m := $imageMetaData }}
+    {{ range $m := first 1 (where $imageMetaData "featured" true) }}
       {{ $imageName := index $m "name" }}
       {{ $alt := index $m "alt" }}
       {{ $short := index $m "short" }}
-      {{ $path := (printf "/photos/%s/%s" $gallery $imageName) }}
       {{ $margin := index $m "margin" }}
       {{ $thumbPathMd := (printf "/photos/%s/thumb_md-%s" $gallery $imageName) }}
       {{ $thumbPathSm := (printf "/photos/%s/thumb_sm-%s" $gallery $imageName) }}
+      {{ with (imageConfig (printf "/static%s" $thumbPathMd)) }}
 
       <div class="gallery-image">
 
         {{ if (where (readDir $dir) "Name" $imageName) }}
-          <a href="{{ $permaLink }}?index={{ $index }}">
-            <img alt="{{ $alt }}"
+          <a href="{{ $permaLink }}">
 
+            <img class="lazy" alt="{{ $alt }}" width="{{ .Width }}" height="{{ .Height }}"
               {{ if $margin }}
                 style="
 
@@ -42,23 +42,15 @@
 
                       "
               {{ end }}
-
-              {{ if (index $m "featured") }}
-                src="{{ $.Site.BaseURL | relURL }}{{ $thumbPathMd }}"
-              {{ else }}
-                src="{{ $.Site.BaseURL | relURL }}{{ $thumbPathSm }}"
-              {{ end }}
-
-              />
+                data-original="{{ $.Site.BaseURL | relURL }}{{ $thumbPathMd }}"/>
           </a>
-          <p>{{ $short }}</p>
 
         {{ else }}
-          <p>{{ substr $path 1 }} does not exist</p>
+          <p>{{ substr (printf "/photos/%s/%s" $gallery $imageName) 1 }} does not exist</p>
         {{ end }}
 
       </div>
-
+      {{ end }}
     {{ end }}
 
     <p class="description">{{ .Params.description }}</p>

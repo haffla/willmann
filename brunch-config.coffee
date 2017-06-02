@@ -9,6 +9,8 @@ module.exports = config:
     globals:
       $: 'jquery'
       jQuery: 'jquery'
+    styles:
+      swiper: ['dist/css/swiper.min.css']
   plugins:
     sharp:
       src: 'photos'
@@ -17,7 +19,7 @@ module.exports = config:
       tasks:
         [
           [
-            {resize: [1920, null]}
+            {resize: [1200, null]}
             {withoutEnlargement: true}
             {rename: '{base}.{ext}'}
           ]

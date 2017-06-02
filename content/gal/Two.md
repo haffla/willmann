@@ -7,14 +7,14 @@ photos:
   - name: uno.jpeg
     alt: "La primera"
     short: Uno
-    featured: true
     margin:
       right: 20
   - name: dos.jpeg
     alt: "La segunda"
     short: "I'm featured!"
+    featured: true
     margin:
-      right: 50
+      right: 20
   - name: tres.jpeg
     alt: "La tercera"
     short: Three

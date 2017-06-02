@@ -13,8 +13,6 @@ photos:
     alt: "The second photo wuhuu"
     short: "I'm featured"
     featured: true
-    margin:
-      right: 100
   - name: three.jpeg
     alt: "The third photo OMG"
     short: Three
