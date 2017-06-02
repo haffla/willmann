@@ -8,7 +8,7 @@ const App = {
     const swiperContainer = $('.swiper-container');
     const swiperWrapper = $('.swiper-wrapper');
     if(swiperContainer.length) {
-      this.setupSwipe(swiperContainer);
+      this.setupSwipe(swiperContainer, swiperWrapper);
     }
 
     $("img.lazy").lazyload();
@@ -29,7 +29,7 @@ const App = {
     });
   },
 
-  setupSwipe(swiperContainer) {
+  setupSwipe(swiperContainer, swiperWrapper) {
     const setSwiperContainerHeight = function() {
       const hsize = ($(window).height() * 0.9) - $('#personal').outerHeight(true);
       swiperContainer.css("height", hsize + "px");
@@ -38,7 +38,7 @@ const App = {
     $(document).ready(setSwiperContainerHeight);
     $(window).resize(setSwiperContainerHeight);
 
-    const mySwiper = new Swiper('.' + swiperContainer.attr('class'), {
+    const swiper = new Swiper('.' + swiperContainer.attr('class'), {
       loop: true,
       keyboardControl: true,
       pagination: '.swiper-pagination',
@@ -48,7 +48,6 @@ const App = {
       hashnav: true,
       hashnavWatchState: true,
       preloadImages: false,
-      // Enable lazy loading
       lazyLoading: true,
       lazyLoadingOnTransitionStart: true,
       onLazyImageReady: function(swiper, slide, image) {
@@ -56,6 +55,11 @@ const App = {
         const $image = $(image);
         $image.attr('alt', $image.data('alt'));
       }
+    });
+
+    swiperWrapper.click(function(ev) {
+      const width = $(window).width();
+      ev.pageX < width / 2 ? swiper.slidePrev() : swiper.slideNext();
     });
   }
 };
