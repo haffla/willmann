@@ -6,6 +6,7 @@ $font-size-small: 9px;
 body {
   font-family: Helvetica, sans-serif;
   line-height: 13px;
+  letter-spacing: 1px;
 }
 
 #main-wrapper {
@@ -84,6 +85,10 @@ a {
   height: 50px;
   a {
     color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .wrapper {
