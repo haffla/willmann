@@ -1,6 +1,7 @@
 'use strict';
 
 import 'jquery-lazyload';
+import 'salvattore';
 import Swiper from 'swiper';
 
 const App = {

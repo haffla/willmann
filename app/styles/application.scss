@@ -1,5 +1,6 @@
 @import "reset";
 
+$font-size-big: 14px;
 $font-size-text: 11px;
 $font-size-small: 9px;
 
@@ -13,6 +14,11 @@ body {
   margin: 75px 10px 10px 10px;
 }
 
+#content-wrapper {
+  margin: 75px auto 10px auto;
+  max-width: 1110px;
+}
+
 a {
   color: black;
 }
@@ -20,7 +26,7 @@ a {
 // Only index page
 #gallery {
   text-align: center;
-  max-width: 75%;
+  max-width: 95%;
   margin: 0 auto;
 }
 
@@ -69,6 +75,8 @@ a {
   width: 100%;
   text-align: right;
   font-size: $font-size-small;
+  background-color: black;
+  color: white;
 }
 
 #personal, #copyright-section {
@@ -76,15 +84,14 @@ a {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: black;
-  color: white;
 }
 
 #personal {
   top: 0;
   height: 37px;
+  background-color: white;
+  box-shadow: 0 0 2px #888;
   a {
-    color: white;
     text-decoration: none;
     &:hover {
       text-decoration: underline;
@@ -99,6 +106,9 @@ a {
     }
     .fullname {
       left: 20px;
+      a {
+        font-size: $font-size-big !important;
+      }
     }
     .links {
       right: 20px;
@@ -121,5 +131,9 @@ a {
     text-align: center;
     min-height: 200px;
     padding-top: 10px;
+    .short {
+      margin-top: 5px;
+      color: grey;
+    }
   }
 }

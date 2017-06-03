@@ -1,59 +1,57 @@
 {{ if isset .Params "gal" }}
   {{ $gallery := .Params.gal }}
-  {{ $imageMetaData := .Params.photos }}
   {{ $dir := (printf "static/photos/%s/" $gallery) }}
   {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 
   <div class="gallery-item">
 
-    {{ range $m := first 1 (where $imageMetaData "featured" true) }}
+    {{ range $m := first 1 (where .Params.photos "featured" true) }}
       {{ $imageName := index $m "name" }}
       {{ $alt := index $m "alt" }}
-      {{ $short := index $m "short" }}
+      {{ $size := or (index $m "size") "md" }}
       {{ $margin := index $m "margin" }}
-      {{ $thumbPathMd := (printf "/photos/%s/thumb_md-%s" $gallery $imageName) }}
-      {{ $thumbPathSm := (printf "/photos/%s/thumb_sm-%s" $gallery $imageName) }}
-      {{ with (imageConfig (printf "/static%s" $thumbPathMd)) }}
+      {{ $thumbPath := (printf "/photos/%s/thumb_%s-%s" $gallery $size $imageName) }}
+      {{ if (where (readDir $dir) "Name" $imageName) }}
+        {{ with (imageConfig (printf "/static%s" $thumbPath)) }}
 
-      <div class="gallery-image">
+        <div class="gallery-image">
 
-        {{ if (where (readDir $dir) "Name" $imageName) }}
-          <a href="{{ $permaLink }}">
+            <a href="{{ $permaLink }}">
 
-            <img class="lazy" alt="{{ $alt }}" width="{{ .Width }}" height="{{ .Height }}"
-              {{ if $margin }}
-                style="
+              <img class="lazy" alt="{{ $alt }}" width="{{ .Width }}" height="{{ .Height }}"
+                {{ if $margin }}
+                  style="
 
-                  {{ if index $margin "top" }}
-                    margin-top: {{ index $margin "top" }}px;
-                  {{ end }}
+                    {{ if index $margin "top" }}
+                      margin-top: {{ index $margin "top" }}px;
+                    {{ end }}
 
-                  {{ if index $margin "bottom" }}
-                    margin-bottom: {{ index $margin "bottom" }}px;
-                  {{ end }}
+                    {{ if index $margin "bottom" }}
+                      margin-bottom: {{ index $margin "bottom" }}px;
+                    {{ end }}
 
-                  {{ if index $margin "left" }}
-                    margin-left: {{ index $margin "left" }}px;
-                  {{ end }}
+                    {{ if index $margin "left" }}
+                      margin-left: {{ index $margin "left" }}px;
+                    {{ end }}
 
-                  {{ if index $margin "right" }}
-                    margin-right: {{ index $margin "right" }}px;
-                  {{ end }}
+                    {{ if index $margin "right" }}
+                      margin-right: {{ index $margin "right" }}px;
+                    {{ end }}
 
-                      "
-              {{ end }}
-                data-original="{{ $.Site.BaseURL | relURL }}{{ $thumbPathMd }}"/>
-          </a>
+                        "
+                {{ end }}
+                  data-original="{{ $.Site.BaseURL | relURL }}{{ $thumbPath }}"/>
+            </a>
 
-        {{ else }}
-          <p>{{ substr (printf "/photos/%s/%s" $gallery $imageName) 1 }} does not exist</p>
-        {{ end }}
+          {{ else }}
+            <p>{{ substr (printf "/photos/%s/%s" $gallery $imageName) 1 }} does not exist</p>
+          {{ end }}
 
-      </div>
+        </div>
       {{ end }}
     {{ end }}
 
-    <p class="description">{{ .Params.description }}</p>
+    <p class="description">{{ .Title }}</p>
   </div>
 
 {{ end }}

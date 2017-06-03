@@ -1,7 +1,7 @@
 ---
-date: "2017-05-10T21:30:21+02:00"
-title: "Series I"
-description: "I just downloaded these photos from the internet... lol"
+date: "2017-05-18T21:30:21+02:00"
+title: "Series III"
+description: "LoL"
 gal: "gal"
 photos:
   - name: one.jpeg
@@ -10,10 +10,10 @@ photos:
   - name: two.jpeg
     alt: "The second photo wuhuu"
     short: "I'm featured"
-    featured: true
   - name: three.jpeg
     alt: "The third photo OMG"
     short: Three
+    featured: true
 ---
 
 So savvy

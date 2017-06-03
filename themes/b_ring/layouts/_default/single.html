@@ -1,6 +1,10 @@
 {{ partial "header.html" . }}
 {{ partial "top.html" . }}
-  {{- if eq .Type "gal" }}
+  {{ if eq .Type "gal" }}
     {{ partial "slider.html" . }}
-  {{- end }}
+  {{ else }}
+    <div id="content-wrapper">
+      {{ .Content }}
+    </div>
+  {{ end }}
 {{ partial "footer.html" . }}
