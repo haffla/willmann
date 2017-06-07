@@ -19,7 +19,7 @@ echo "Removing existing files"
 rm -rf public/*
 
 echo "Running brunch"
-brunch build --production
+node_modules/.bin/brunch build --production
 
 echo "Generating site"
 hugo
