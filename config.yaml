@@ -11,3 +11,5 @@ params:
   seo:
     description: "Tob Wallas Portfolio"
     keywords: "art, photography, berlin"
+  show_slider_buttons: false
+  show_pagination: false

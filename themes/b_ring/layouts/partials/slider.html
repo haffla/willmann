@@ -4,8 +4,8 @@
     {{ .Content }}
   </div>
   <div id="single-actions">
-    <a id="text-link" href="#">Text</a>
-    <a id="home-link" href="{{ .Site.BaseURL | relURL }}">Close</a>
+    <a id="text-link" class="hidden" href="#">Text</a>
+    <a id="home-link" title="close" href="{{ .Site.BaseURL | relURL }}">&#x2716;</a>
   </div>
   <div class="swiper-wrapper">
     {{ $gallery := .Params.gal }}
@@ -23,7 +23,13 @@
       </div>
     {{ end }}
   </div>
-  <div class="swiper-pagination swiper-pagination-black"></div>
-  <div class="swiper-button-prev swiper-button-black"></div>
-  <div class="swiper-button-next swiper-button-black"></div>
+
+  {{ if $.Site.Params.show_pagination }}
+    <div class="swiper-pagination swiper-pagination-black"></div>
+  {{ end }}
+
+  {{ if $.Site.Params.show_slider_buttons }}
+    <div class="swiper-button-prev swiper-button-black"></div>
+    <div class="swiper-button-next swiper-button-black"></div>
+  {{ end }}
 </div>

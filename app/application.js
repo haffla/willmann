@@ -40,6 +40,7 @@ const App = {
     $(window).resize(setSwiperContainerHeight);
 
     const swiper = new Swiper('.' + swiperContainer.attr('class'), {
+      speed: 800,
       loop: true,
       keyboardControl: true,
       pagination: '.swiper-pagination',

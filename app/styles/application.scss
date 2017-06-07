@@ -69,7 +69,8 @@ a {
 }
 
 #home-link, p, td, a {
-  font-size: $font-size-text;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 #copyright-section {
@@ -91,8 +92,6 @@ a {
 #personal {
   top: 0;
   height: 37px;
-  background-color: white;
-  box-shadow: 0 0 2px #888;
   a {
     text-decoration: none;
     &:hover {
@@ -101,6 +100,9 @@ a {
   }
 
   .wrapper {
+    a {
+      font-size: $font-size-big;
+    }
     position: relative;
     .fullname, .links {
       position: absolute;
@@ -108,9 +110,6 @@ a {
     }
     .fullname {
       left: 20px;
-      a {
-        font-size: $font-size-big !important;
-      }
     }
     .links {
       right: 20px;
@@ -132,7 +131,8 @@ a {
   .swiper-slide {
     text-align: center;
     min-height: 200px;
-    padding-top: 10px;
+    padding-top: 30px;
+    cursor: ew-resize;
     .short {
       margin-top: 5px;
       color: grey;
