@@ -3,10 +3,6 @@
   <div class="the-content hidden">
     {{ .Content }}
   </div>
-  <div id="single-actions">
-    <a id="text-link" class="hidden" href="#">Text</a>
-    <a id="home-link" title="close" href="{{ .Site.BaseURL | relURL }}">&#x2716;</a>
-  </div>
   <div class="swiper-wrapper">
     {{ $gallery := .Params.gal }}
     {{ $imageMetaData := .Params.photos }}

@@ -1,4 +1,5 @@
 /static/*
+!/static/favicon.ico
 node_modules
 build
 public

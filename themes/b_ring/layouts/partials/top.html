@@ -4,8 +4,12 @@
       <a href="{{ $.Site.BaseURL }}">{{ .Site.Params.fullname }}</p>
     </div>
     <div class="links">
-      <a target="_blank" href="https://www.instagram.com/tobias_willmann/">Instagram</a>
-      <a href="{{ $.Site.BaseURL }}contact">Contact</a>
+		{{ if .IsHome }}
+			<a target="_blank" href="{{ .Site.Params.contact.instagram }}">Instagram</a> |
+      <a href="{{ $.Site.BaseURL | relURL }}/contact">Contact</a>
+    {{ else }}
+      <a id="home-link" title="close" href="{{ .Site.BaseURL | relURL }}">Close</a>
+		{{ end }}
     </div>
   </div>
 </div>

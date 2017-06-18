@@ -1,10 +1,10 @@
-  <div id="copyright-section"><small>&copy; {{ .Site.Params.fullname }} {{ now.Year }}</small></div>
+  </div>
+  <div id="copyright-section" class="hidden"><small>&copy; {{ .Site.Params.fullname }} {{ now.Year }}</small></div>
   <script>
     function appInit() {
       require('application').init();
     }
   </script>
-  <script async="true" onload="appInit()" src="{{ .Site.BaseURL }}/js/app.js"></script>
-  </div>
+  <script async="true" onload="appInit()" src="{{ .Site.BaseURL | relURL }}/js/app.js"></script>
 </body>
 </html>

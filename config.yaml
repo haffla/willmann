@@ -1,15 +1,15 @@
-baseURL: "https://haffla.github.io/willmann"
-languageCode: "en-us"
-title: "T_WILL"
-theme: "b_ring"
+baseURL: https://haffla.github.io/willmann
+languageCode: en-us
+title: Photography
+theme: b_ring
 
 params:
-  fullname: "Tob Walla"
+  fullname: Tobias Willmann
   contact:
-    mail: "mail@tobwalla.com"
-    instagram: "@tob_walla"
+    mail: tobias.willmann@gmail.com
+    instagram: https://www.instagram.com/tobias_willmann
   seo:
-    description: "Tob Wallas Portfolio"
-    keywords: "art, photography, berlin"
+    description: Tobias Willmann's Portfolio
+    keywords: art, photography, berlin
   show_slider_buttons: false
   show_pagination: false

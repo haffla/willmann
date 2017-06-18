@@ -1,7 +1,6 @@
 'use strict';
 
 import 'jquery-lazyload';
-import 'salvattore';
 import Swiper from 'swiper';
 
 const App = {
@@ -14,20 +13,22 @@ const App = {
 
     $("img.lazy").lazyload();
 
-    const textLink = $('#text-link');
+    // could set css min-height to 100vh, but does not work on IE < 11
+    $('#main-wrapper').css("min-height", $(window).height());
+    $('#copyright-section').removeClass('hidden');
 
-    $('#text-link').click((e) => {
-      e.preventDefault();
-      const theContent = $('.the-content').toggleClass('hidden');
-      swiperWrapper.toggleClass('hidden');
-      $('.swiper-button-prev, .swiper-button-next, .swiper-pagination').toggleClass('hidden');
-      if(theContent.hasClass('hidden')) {
-        textLink.text('Text');
-      }
-      else {
-        textLink.text('Images');
-      }
-    });
+    // $('#text-link').click((e) => {
+    //   e.preventDefault();
+    //   const theContent = $('.the-content').toggleClass('hidden');
+    //   swiperWrapper.toggleClass('hidden');
+    //   $('.swiper-button-prev, .swiper-button-next, .swiper-pagination').toggleClass('hidden');
+    //   if(theContent.hasClass('hidden')) {
+    //     textLink.text('Text');
+    //   }
+    //   else {
+    //     textLink.text('Images');
+    //   }
+    // });
   },
 
   setupSwipe(swiperContainer, swiperWrapper) {
