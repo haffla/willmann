@@ -5,7 +5,8 @@
     </div>
     <div class="links">
 		{{ if .IsHome }}
-			<a target="_blank" href="{{ .Site.Params.contact.instagram }}">Instagram</a> |
+			<a target="_blank" href="{{ .Site.Params.contact.instagram }}">Instagram</a>
+      &nbsp;
       <a href="{{ $.Site.BaseURL | relURL }}/contact">Contact</a>
     {{ else }}
       <a id="home-link" title="close" href="{{ .Site.BaseURL | relURL }}">Close</a>
