@@ -3,31 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://haffla.github.io/willmann/gal/two/</loc>
-    <lastmod>2017-05-25T21:30:21+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haffla.github.io/willmann/gal/four/</loc>
-    <lastmod>2017-05-18T21:30:21+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haffla.github.io/willmann/gal/six/</loc>
-    <lastmod>2017-05-18T21:30:21+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haffla.github.io/willmann/gal/three/</loc>
-    <lastmod>2017-05-18T21:30:21+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://haffla.github.io/willmann/gal/five/</loc>
-    <lastmod>2017-05-18T21:30:21+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://haffla.github.io/willmann/gal/one/</loc>
     <lastmod>2017-05-10T21:30:21+02:00</lastmod>
   </url>
@@ -44,13 +19,13 @@
   
   <url>
     <loc>https://haffla.github.io/willmann/gal/</loc>
-    <lastmod>2017-05-25T21:30:21+02:00</lastmod>
+    <lastmod>2017-05-10T21:30:21+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://haffla.github.io/willmann/</loc>
-    <lastmod>2017-05-25T21:30:21+02:00</lastmod>
+    <lastmod>2017-05-10T21:30:21+02:00</lastmod>
     <priority>0</priority>
   </url>
   
