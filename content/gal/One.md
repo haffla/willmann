@@ -1,19 +1,11 @@
 ---
 date: "2017-05-10T21:30:21+02:00"
-title: "Series I"
-description: "I just downloaded these photos from the internet... lol"
-gal: "gal"
+title: Series I
+description: ""
+gal: gal
 photos:
-  - name: one.jpeg
-    alt: "The first photo"
+  - name: m.jpg
+    alt: Some alt description
     short: One
-  - name: two.jpeg
-    alt: "The second photo wuhuu"
-    short: "I'm featured"
     featured: true
-  - name: three.jpeg
-    alt: "The third photo OMG"
-    short: Three
 ---
-
-So savvy
