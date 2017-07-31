@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gals on Photography</title>
-    <link>https://haffla.github.io/willmann/gal/</link>
+    <link>http://tobiaswillmann.com/gal/</link>
     <description>Recent content in Gals on Photography</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 May 2017 21:30:21 +0200</lastBuildDate>
     
-	<atom:link href="https://haffla.github.io/willmann/gal/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://tobiaswillmann.com/gal/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Series I</title>
-      <link>https://haffla.github.io/willmann/gal/one/</link>
+      <link>http://tobiaswillmann.com/gal/one/</link>
       <pubDate>Wed, 10 May 2017 21:30:21 +0200</pubDate>
       
-      <guid>https://haffla.github.io/willmann/gal/one/</guid>
+      <guid>http://tobiaswillmann.com/gal/one/</guid>
       <description></description>
     </item>
     
