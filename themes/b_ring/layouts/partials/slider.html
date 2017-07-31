@@ -11,7 +11,7 @@
       {{ $imageName := index $m "name" }}
       {{ $alt := index $m "alt" }}
       {{ $short := index $m "short" }}
-      {{ $path := (printf "%s/photos/%s/%s" (relURL $.Site.BaseURL) $gallery $imageName) }}
+      {{ $path := (printf "/photos/%s/%s" $gallery $imageName) }}
       <div class="swiper-slide" data-hash="photo-{{ add $index 1 }}">
         <img class="swiper-lazy" data-src="{{ $path }}" data-alt="{{ $alt }}"/>
         <div class="swiper-lazy-preloader"></div>
