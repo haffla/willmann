@@ -1,5 +1,5 @@
 /static/*
-!/static/favicon.ico
+!/static/CNAME
 node_modules
 build
 public
