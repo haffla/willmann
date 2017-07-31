@@ -12,13 +12,11 @@
       {{ $margin := index $m "margin" }}
       {{ $thumbPath := (printf "/photos/%s/thumb_%s-%s" $gallery $size $imageName) }}
       {{ if (where (readDir $dir) "Name" $imageName) }}
-        {{ with (imageConfig (printf "/static%s" $thumbPath)) }}
-
         <div class="gallery-image">
 
             <a href="{{ $permaLink }}">
 
-              <img class="lazy" alt="{{ $alt }}" width="{{ .Width }}" height="{{ .Height }}"
+              <img class="lazy" alt="{{ $alt }}"
                 {{ if $margin }}
                   style="
 
@@ -49,7 +47,6 @@
 
         </div>
       {{ end }}
-    {{ end }}
 
     <p class="description">{{ .Title }}</p>
   </div>
