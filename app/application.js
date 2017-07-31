@@ -33,7 +33,7 @@ const App = {
 
   setupSwipe(swiperContainer, swiperWrapper) {
     const setSwiperContainerHeight = function() {
-      const hsize = ($(window).height() * 0.9) - $('#personal').outerHeight(true);
+      const hsize = ($(window).height() * 0.9);
       swiperContainer.css("height", hsize + "px");
     }
 
