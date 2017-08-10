@@ -21,6 +21,6 @@ collections:
           - {name: "name", label: "Name", widget: "string"}
           - {name: "alt", label: "Alt", widget: "string"}
           - {name: "short", label: "Short", widget: "string"}
-          - {name: "featured" label: "Featured", widget: "checkbox"}
+          - {name: "featured", label: "Featured", widget: "checkbox"}
           - {name: "photo", label: "Photo", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
