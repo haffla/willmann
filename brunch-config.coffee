@@ -11,6 +11,9 @@ module.exports = config:
       jQuery: 'jquery'
     styles:
       swiper: ['dist/css/swiper.min.css']
+  conventions:
+    ignored: () -> false
+    assets: /assets\//
   plugins:
     sharp:
       src: 'photos'

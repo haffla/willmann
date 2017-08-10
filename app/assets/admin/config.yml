@@ -1,0 +1,4 @@
+backend:
+  name: github
+  repo: haffla/willmann
+  branch: master # Branch to update
