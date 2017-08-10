@@ -2,10 +2,9 @@
 date: "2017-05-10T21:30:21+02:00"
 title: Series I
 description: ""
-gal: gal
 photos:
-  - name: m.jpg
-    alt: Some alt description
+  - alt: Some alt description
+    featured: "true"
     short: One
-    featured: true
+    photo: "/photos/gal/m.jpg"
 ---

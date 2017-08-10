@@ -13,14 +13,11 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Gallery", name: "gal", widget: "string", default: "gal"}
       - name: "photos"
         label: "Photos"
         widget: "list"
         fields:
-          - {name: "name", label: "Name", widget: "string"}
           - {name: "alt", label: "Alt", widget: "string"}
           - {name: "short", label: "Short", widget: "string"}
-          - {name: "featured", label: "Featured", widget: "checkbox"}
+          - {name: "featured", label: "Featured", widget: "string", default: "true"}
           - {name: "photo", label: "Photo", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}

@@ -4,14 +4,10 @@
     {{ .Content }}
   </div>
   <div class="swiper-wrapper">
-    {{ $gallery := .Params.gal }}
-    {{ $imageMetaData := .Params.photos }}
-
-    {{ range $index, $m := $imageMetaData }}
-      {{ $imageName := index $m "name" }}
+    {{ range $index, $m := .Params.photos }}
+      {{ $path := index $m "photo" }}
       {{ $alt := index $m "alt" }}
       {{ $short := index $m "short" }}
-      {{ $path := (printf "/photos/%s/%s" $gallery $imageName) }}
       <div class="swiper-slide" data-hash="photo-{{ add $index 1 }}">
         <img class="swiper-lazy" data-src="{{ $path }}" data-alt="{{ $alt }}"/>
         <div class="swiper-lazy-preloader"></div>
