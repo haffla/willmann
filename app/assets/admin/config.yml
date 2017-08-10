@@ -2,3 +2,5 @@ backend:
   name: github
   repo: haffla/willmann
   branch: master # Branch to update
+media_folder: "photos/ups"
+public_folder: "/ups"
