@@ -1,4 +1,3 @@
-{{ $dir := "static/photos/gal/" }}
 {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 
 <div class="gallery-item">
@@ -11,42 +10,36 @@
     {{ $size := or (index $m "size") "md" }}
     {{ $margin := index $m "margin" }}
     {{ $thumbPath := (printf "/photos/gal/thumb_%s-%s" $size $img) }}
-    {{ if (where (readDir $dir) "Name" $img) }}
-      <div class="gallery-image">
+    <div class="gallery-image">
 
-          <a href="{{ $permaLink }}">
+        <a href="{{ $permaLink }}">
 
-            <img class="lazy" alt="{{ $alt }}"
-              {{ if $margin }}
-                style="
+          <img class="lazy" alt="{{ $alt }}"
+            {{ if $margin }}
+              style="
 
-                  {{ if index $margin "top" }}
-                    margin-top: {{ index $margin "top" }}px;
-                  {{ end }}
+                {{ if index $margin "top" }}
+                  margin-top: {{ index $margin "top" }}px;
+                {{ end }}
 
-                  {{ if index $margin "bottom" }}
-                    margin-bottom: {{ index $margin "bottom" }}px;
-                  {{ end }}
+                {{ if index $margin "bottom" }}
+                  margin-bottom: {{ index $margin "bottom" }}px;
+                {{ end }}
 
-                  {{ if index $margin "left" }}
-                    margin-left: {{ index $margin "left" }}px;
-                  {{ end }}
+                {{ if index $margin "left" }}
+                  margin-left: {{ index $margin "left" }}px;
+                {{ end }}
 
-                  {{ if index $margin "right" }}
-                    margin-right: {{ index $margin "right" }}px;
-                  {{ end }}
+                {{ if index $margin "right" }}
+                  margin-right: {{ index $margin "right" }}px;
+                {{ end }}
 
-                      "
-              {{ end }}
-                data-original="{{ $thumbPath }}"/>
-          </a>
-
-        {{ else }}
-          <p>{{ substr (printf "/photos/gal/%s" $imageName) 1 }} does not exist</p>
-        {{ end }}
-
-      </div>
-    {{ end }}
+                    "
+            {{ end }}
+              data-original="{{ $thumbPath }}"/>
+        </a>
+        
+    </div>
 
   <p class="description">{{ .Title }}</p>
 </div>
