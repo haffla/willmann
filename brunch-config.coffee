@@ -18,7 +18,6 @@ module.exports = config:
     sharp:
       src: 'photos'
       dest: 'static/photos'
-      imageExt: ['jpg', 'jpeg']
       tasks:
         [
           [
