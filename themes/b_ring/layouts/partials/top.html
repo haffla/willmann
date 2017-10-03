@@ -1,7 +1,7 @@
 <div id="personal">
   <div class="wrapper">
     <div class="fullname">
-      <a href="{{ $.Site.BaseURL }}">{{ .Site.Params.fullname }}</p>
+      <a href="/">{{ .Site.Params.fullname }}</p>
     </div>
     <div class="links">
 		{{ if .IsHome }}
@@ -9,7 +9,7 @@
       &nbsp;
       <a href="/contact">Contact</a>
     {{ else }}
-      <a id="home-link" title="close" href="{{ .Site.BaseURL | relURL }}">Close</a>
+      <a id="home-link" title="close" href="/">Close</a>
 		{{ end }}
     </div>
   </div>
