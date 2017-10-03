@@ -4,4 +4,4 @@ title = "Contact"
 
 +++
 
-<a href="mailto:willmann.tobias@gmail.com">willmann.tobias@gmail.com</a>
+<a href="mailto:mail@tobiaswillmann.com">mail@tobiaswillmann.com</a>
