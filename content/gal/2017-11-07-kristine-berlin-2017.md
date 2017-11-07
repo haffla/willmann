@@ -5,8 +5,10 @@ photos:
   - featured: 'true'
     photo: /photos/gal/000017 4.jpg
   - photo: /photos/gal/000030.JPG
-  - photo: /photos/gal/000021.JPG
+  - featured: 'true'
+    photo: /photos/gal/000021.JPG
   - photo: /photos/gal/000032.JPG
 ---
+
 
 
