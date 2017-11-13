@@ -12,7 +12,7 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Ghost Image?", name: 'ghostImage', widget: 'boolean', default: false}
+      - {label: "Ghost?", name: 'isGhost', widget: 'boolean', default: false}
       - name: "photos"
         label: "Photos"
         widget: "list"
