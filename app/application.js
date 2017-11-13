@@ -42,7 +42,7 @@ const App = {
 
     const swiper = new Swiper('.' + swiperContainer.attr('class'), {
       speed: 800,
-      loop: true,
+      loop: false,
       keyboardControl: true,
       pagination: '.swiper-pagination',
       nextButton: '.swiper-button-next',
