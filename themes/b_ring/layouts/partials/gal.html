@@ -1,5 +1,10 @@
 {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 {{ $isGhost := .Params.isGhost }}
+{{ $mt := or .Params.mt "0" }}
+{{ $mr := or .Params.mr "0" }}
+{{ $mb := or .Params.mb "0" }}
+{{ $ml := or .Params.ml "0" }}
+{{ $margin := (printf "%srem %srem %srem %srem" $mt $mr $mb $ml ) }}
 
 <div class="gallery-item">
 
@@ -10,11 +15,6 @@
     {{ $alt := index $m "alt" }}
     {{ $size := or (index $m "size") "md" }}
     {{ $thumbPath := (printf "/photos/gal/thumb_%s-%s" $size $img) }}
-    {{ $mt := or (index $m "mt") 0 }}
-    {{ $mr := or (index $m "mr") 0 }}
-    {{ $mb := or (index $m "mb") 0 }}
-    {{ $ml := or (index $m "ml") 10 }}
-    {{ $margin := (printf "%drem %drem %drem %drem" $mt $mr $mb $ml ) }}
 
     <div class="gallery-image">
     {{ if $isGhost }}
