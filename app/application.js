@@ -11,20 +11,6 @@ const App = {
       this.setupSwipe(swiperContainer, swiperWrapper);
     }
 
-    const margins = ['left', 'right', 'top', 'bottom']
-    const galImages = $('.gallery-image img');
-    const randomMargins = () => {
-      if ($(window).width() > 978) {
-        $.each(galImages, (idx, img) => {
-          margins.forEach(margin => {
-            $(img).css('margin-' + margin, Math.random() * 250)
-          })
-        });
-      }
-    }
-    $(window).resize(randomMargins)
-    randomMargins()
-
     $("img.lazy").lazyload();
 
     // could set css min-height to 100vh, but does not work on IE < 11

@@ -10,13 +10,18 @@
     {{ $alt := index $m "alt" }}
     {{ $size := or (index $m "size") "md" }}
     {{ $thumbPath := (printf "/photos/gal/thumb_%s-%s" $size $img) }}
+    {{ $mt := or (index $m "mt") 0 }}
+    {{ $mr := or (index $m "mr") 0 }}
+    {{ $mb := or (index $m "mb") 0 }}
+    {{ $ml := or (index $m "ml") 10 }}
+    {{ $margin := (printf "%drem %drem %drem %drem" $mt $mr $mb $ml ) }}
 
     <div class="gallery-image">
     {{ if $isGhost }}
       <img class="lazy ghost-image" alt="{{ $alt }}" data-original="{{ $thumbPath }}"/>
     {{ else }}
       <a href="{{ $permaLink }}">
-        <img class="lazy" alt="{{ $alt }}" data-original="{{ $thumbPath }}"/>
+        <img class="lazy" alt="{{ $alt }}" data-original="{{ $thumbPath }}" style="margin: {{ $margin }};" />
       </a>
     {{ end }}
     </div>
