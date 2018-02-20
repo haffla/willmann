@@ -14,7 +14,7 @@
     {{ $img := index $splitted (sub (len $splitted) 1) }}
     {{ $alt := index $m "alt" }}
     {{ $size := or (index $m "size") "md" }}
-    {{ $thumbPath := (printf "/photos/gal/thumb_%s-%s" $size $img) }}
+    {{ $thumbPath := (printf "/photos/gal/%s" $img) }}
 
     <div class="gallery-image">
     {{ if $isGhost }}

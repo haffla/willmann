@@ -130,7 +130,7 @@ p, td, a {
 
   img {
     max-width: 95%;
-    max-height: 85%;
+    max-height: 100%;
   }
 
   .swiper-slide {
@@ -148,7 +148,6 @@ p, td, a {
 
 @media (min-width: 960px) {
   .gallery-item {
-    padding: 100px;
     width: 50%;
     box-sizing: border-box;
     text-align: center;
