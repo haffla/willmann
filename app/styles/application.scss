@@ -34,6 +34,8 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -43,7 +45,7 @@ a {
   .gallery-image {
     img {
       width: 100%;
-      max-width: 80%;
+      max-width: 100%;
       // max-height: 90%; // old browsers
       // max-height: 90vh; // modern browsers (old ones ignore this)
     }
@@ -51,7 +53,8 @@ a {
   &.fullwidth {
     .gallery-image {
       img {
-        width: auto;
+        max-width: 100%;
+        width: 100%;
       }
     }
   }
@@ -154,6 +157,9 @@ p, td, a {
 }
 
 @media (min-width: 960px) {
+  #gallery {
+    width: 80%;
+  }
   .gallery-item {
     width: 50%;
     &.fullwidth {
