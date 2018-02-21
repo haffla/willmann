@@ -1,12 +1,5 @@
 {{ $permaLink := substr (relURL .Permalink) 0 -1 }}
 {{ $isGhost := .Params.isGhost }}
-{{ $mt := or .Params.mt "0" }}
-{{ $mr := or .Params.mr "0" }}
-{{ $mb := or .Params.mb "0" }}
-{{ $ml := or .Params.ml "0" }}
-{{ $margin := (printf "%srem %srem %srem %srem" $mt $mr $mb $ml ) }}
-
-<div class="gallery-item">
 
   {{ range $m := first 1 (where .Params.photos "featured" "true") }}
     {{ $imageName := index $m "photo" }}
@@ -15,13 +8,20 @@
     {{ $alt := index $m "alt" }}
     {{ $size := or (index $m "size") "md" }}
     {{ $thumbPath := (printf "/photos/gal/%s" $img) }}
-
+    {{ with imageConfig (printf "photos/gal/%s" $img) }}
+      {{ if gt .Height .Width }}
+        <div class="gallery-item">
+      {{ else }}
+        <div class="gallery-item fullwidth">
+      {{ end }}
+    {{ end }}
+    
     <div class="gallery-image">
     {{ if $isGhost }}
       <img class="lazy ghost-image" alt="{{ $alt }}" data-original="{{ $thumbPath }}"/>
     {{ else }}
       <a href="{{ $permaLink }}">
-        <img class="lazy" alt="{{ $alt }}" data-original="{{ $thumbPath }}" style="margin: {{ $margin }};" />
+        <img class="lazy" alt="{{ $alt }}" data-original="{{ $thumbPath }}" />
       </a>
     {{ end }}
     </div>

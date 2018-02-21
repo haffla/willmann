@@ -40,13 +40,20 @@ a {
   padding: 10px;
   width: 100%;
   text-align: center;
-}
-
-.gallery-image {
-  img {
-    max-width: 100%;
-    max-height: 90%; // old browsers
-    max-height: 90vh; // modern browsers (old ones ignore this)
+  .gallery-image {
+    img {
+      width: 100%;
+      max-width: 80%;
+      // max-height: 90%; // old browsers
+      // max-height: 90vh; // modern browsers (old ones ignore this)
+    }
+  }
+  &.fullwidth {
+    .gallery-image {
+      img {
+        width: auto;
+      }
+    }
   }
 }
 
@@ -149,6 +156,9 @@ p, td, a {
 @media (min-width: 960px) {
   .gallery-item {
     width: 50%;
+    &.fullwidth {
+      width: 100%;
+    }
     box-sizing: border-box;
     text-align: center;
   }
