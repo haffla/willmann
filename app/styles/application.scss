@@ -39,9 +39,8 @@ a {
 }
 
 .gallery-item {
-  padding: 10px;
+  padding: 2rem;
   width: 100%;
-  text-align: center;
   .gallery-image {
     img {
       width: 100%;
@@ -158,7 +157,7 @@ p, td, a {
 
 @media (min-width: 960px) {
   #gallery {
-    width: 80%;
+    width: 70%;
   }
   .gallery-item {
     width: 50%;
