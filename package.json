@@ -13,7 +13,6 @@
     "jquery-lazyload": "^1.9.7",
     "sass-brunch": "^1.9.2",
     "sharp-brunch": "git+https://git@github.com/haffla/sharp-brunch.git",
-    "swiper": "^3.4.2",
     "uglify-js-brunch": "^2.10.0"
   },
   "devDependencies": {

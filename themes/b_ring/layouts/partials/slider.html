@@ -1,27 +1,13 @@
-<div class="swiper-container">
-  <p class="the-title">{{ .Title }}</p>
-  <div class="the-content hidden">
-    {{ .Content }}
-  </div>
-  <div class="swiper-wrapper">
+<div id="image-wrapper">
+  <div class="the-title">{{ .Title }}</div>
+  <div id="image-container">
     {{ range $index, $m := .Params.photos }}
       {{ $path := index $m "photo" }}
       {{ $alt := index $m "alt" }}
       {{ $short := index $m "short" }}
-      <div class="swiper-slide" data-hash="photo-{{ add $index 1 }}">
-        <img class="swiper-lazy" data-src="{{ $path }}" data-alt="{{ $alt }}"/>
-        <div class="swiper-lazy-preloader"></div>
-        <p class="hidden short">{{ $short }}</p>
+      <div class="image">
+        <img class="lazy" data-original="{{ $path }}" alt="{{ $alt }}"/>
       </div>
     {{ end }}
   </div>
-
-  {{ if $.Site.Params.show_pagination }}
-    <div class="swiper-pagination swiper-pagination-black"></div>
-  {{ end }}
-
-  {{ if $.Site.Params.show_slider_buttons }}
-    <div class="swiper-button-prev swiper-button-black"></div>
-    <div class="swiper-button-next swiper-button-black"></div>
-  {{ end }}
 </div>
