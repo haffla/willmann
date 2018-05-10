@@ -5,7 +5,12 @@ ghostImage: false
 photos:
   - featured: 'true'
     photo: /photos/gal/03a.jpg
+  - photo: /photos/gal/000018.jpg
+  - photo: /photos/gal/02a.jpg
+  - photo: /photos/gal/01c.jpg
+  - photo: /photos/gal/01.jpg
 ---
+
 
 
 
