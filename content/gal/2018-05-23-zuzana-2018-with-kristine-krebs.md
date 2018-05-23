@@ -8,7 +8,9 @@ photos:
     photo: /photos/gal/Zuzana 3.jpg
   - photo: /photos/gal/000027.jpg
   - photo: /photos/gal/Unbenannt.jpg
+  - photo: /photos/gal/000010.JPG
 ---
+
 
 
 
