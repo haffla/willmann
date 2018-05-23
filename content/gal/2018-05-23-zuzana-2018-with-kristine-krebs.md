@@ -5,11 +5,8 @@ ghostImage: false
 photos:
   - featured: 'true'
     photo: /photos/gal/Zuzana 3.jpg
-  - featured: ''
-    photo: /photos/gal/000027-1.JPG
-  - featured: ''
-    photo: /photos/gal/Unbenannt.jpg
 ---
+
 
 
 
