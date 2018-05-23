@@ -6,3 +6,4 @@ photos:
   - photo: /photos/gal/Zuzana 3.jpg
 ---
 
+
