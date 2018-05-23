@@ -8,9 +8,10 @@ photos:
   - featured: 'true'
     photo: /photos/gal/000027.JPG
   - {}
-  - featured: 'true'
+  - featured: ''
     photo: /photos/gal/Unbenannt.jpg
 ---
+
 
 
 
