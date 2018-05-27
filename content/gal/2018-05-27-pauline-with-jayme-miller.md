@@ -7,7 +7,9 @@ photos:
     photo: /photos/gal/Pauline.jpg
   - photo: /photos/gal/000017.jpg
   - photo: /photos/gal/000029.jpg
+  - photo: /photos/gal/000012.jpg
 ---
+
 
 
 
