@@ -5,6 +5,8 @@ ghostImage: false
 photos:
   - featured: 'true'
     photo: /photos/gal/Pauline.jpg
+  - photo: /photos/gal/000017.jpg
 ---
+
 
 
