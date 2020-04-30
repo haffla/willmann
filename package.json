@@ -9,7 +9,7 @@
     "babel-brunch": "^6.1.1",
     "brunch": "^2.10.10",
     "javascript-brunch": "^2.10.0",
-    "jquery": "^3.2.1",
+    "jquery": "^3.5.0",
     "jquery-lazyload": "^1.9.7",
     "sass-brunch": "^1.9.2",
     "sharp-brunch": "git+https://git@github.com/haffla/sharp-brunch.git",
